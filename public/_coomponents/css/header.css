@@ -1,0 +1,232 @@
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    background-color: #fffffff8;
+    border-bottom: 1px solid #f1f1f1;
+    z-index: 2;
+}
+
+header > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+header #wrap-title {
+    display: flex;
+    align-items: center;
+}
+
+header #title {
+    color: var(--color-1);
+    font-size: 26px;
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+#bars-search {
+    display: flex;
+}
+
+#bar, #search-btn {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: none;
+    cursor: pointer;
+    display: none;
+}
+
+#search-btn {
+    display: none;
+    font-size: 14px;
+    width: 30px;
+    height: 30px;
+    background-color: #eee;
+}
+
+#bar:active {
+    background:#eee;
+}
+
+#search-btn:active {
+    background-color: #ddd;
+}
+
+#logo {
+    width: 35px;
+    height: 35px;
+}
+
+header #search {
+    outline: none;
+    padding: 10px 12px 10px 38px;
+    width: 600px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #ccc;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 17px;
+    background-image: url(../../assets/img/search.png);
+    font-weight: 100;
+}
+
+header #search:focus {
+    box-shadow:  0 0 4px 6px #fcfcfc;
+}
+
+#search-hide {
+    display: none;
+}
+
+header .right a {
+    padding: 10px 5px;
+    margin: 5px;
+    background-color: #ddd;
+    color: var(--color-1);
+    border-radius: 2px;
+    font-size: 14px;
+}
+
+header #btn-login {
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    padding: 5px;
+    border-radius: 100%;
+    background-color: none;
+    display: none;
+}
+
+header .right a:hover {
+    background-color: var(--color-1);
+    color: #fff;
+    transition: .3s ease;
+}
+
+header .right a i {
+    margin-right: 5px;
+}
+
+@media screen and (max-width: 414px) {
+    header {
+        height: unset;
+        background-color: #fff;
+    }
+
+    .left {
+        position: sticky;
+        top: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        height: 15px;
+        border: 1px solid #f1f1f1;
+        border-radius: 3px;
+    }
+
+    #logo {
+        width: 20px;
+        height: 20px;
+    }
+
+    header #title {
+        font-size: 22px;
+    }
+    
+    header .center {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: #fff;
+        z-index: 3;
+        justify-content: center;
+        display: none;
+    }
+
+    .right {
+        display: none;
+    }
+
+    header #btn-login {
+        display: flex;
+    }
+
+    header form {
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        padding: 0 5px;
+        background-color: none;
+        z-index: 3;
+        justify-content: center;
+    }
+
+    #search-hide {
+        display: inline-block;
+        margin-left: 10px;
+        position: absolute;
+        left: 0;
+        padding: 5px;
+        width: 25px;
+        height: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100%;
+    }
+
+    #search-hide:active {
+        background-color: #eee;
+    }
+
+    header #search {
+        border-radius: 2px;
+        padding-left: 60px;
+        background-position-x: 35px;
+        width: 100%;
+        flex: 1;
+    }
+  
+
+
+    header h1 {
+        height: unset;
+        padding: 0;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+}

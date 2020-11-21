@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "icon" type = "image/png" href = "assets/img/logo.png">
+    <title>Mystore - Panel</title>
+    <link rel="stylesheet" href="css/_libs/all.css">
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/panel.css">
+
+    <script src="js/_libs/jquery-3.5.1.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="left">
+            <h1><span id="bar"><i class="fa fa-bars"></i></span>
+                <a href="/" id="wrap-title">
+                    <img id="logo" src="assets/img/logo.png">
+                    <strong id="title">Mystore</strong>
+                </a>
+            </h1>
+        </div>
+    
+        <div class="right">
+            <a href="/logout"><i class="fa fa-lock"></i>Log Out</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <button id="btn-add-item"><i class="fas fa-plus"></i></button>
+            <div class="items"></div>
+
+        </section>
+
+        <div class="form-container">
+            <form id="form-add-items" method="POST" action="/additem" enctype="multipart/form-data">
+                <input type="text" placeholder="Título" id="txt-title" name="txt_title" required>
+                <input type="number" placeholder="Preço" id="price" name="price" required>
+                
+                <label for="promoting" id="label-promoting">Promover</label>
+                <input type="checkbox" name="promoting" id="promoting">
+                
+                    <input type="file" id="file-img" name="file_img" required>
+                
+                <select id="select-category" name="category">
+                    <option value="0">Computadores</option>
+                    <option value="1">Celulares</option>
+                    <option value="2">Games</option>
+                    <option value="3">Câmeras</option>
+                    <option value="4">Pastas</option>
+                    <option value="5">Carros</option>
+                    <option value="6">Livros</option>
+                    <option value="7">Serviços</option>
+                    <option value="8">Acessórios</option>
+                    <option value="9">Outros</option>
+                </select>
+                
+                <select id="city" name="city">
+                    <option value="0">Maputo</option>
+                    <option value="1">Matola</option>
+                    <option value="2">Inhambane</option>
+                    <option value="3">Gaza</option>
+                    <option value="4">Chibuto</option>
+                    <option value="5">Nampula</option>
+                    <option value="6">Quelimane</option>
+                    <option value="7">Beira</option>
+                    <option value="8">Tete</option>
+                    <option value="9">Cabo Delgado</option>
+                    <option value="10">Lichinga</option>
+                    <option value="11">Pemba</option>
+                    <option value="12">Outra</option>
+                </select>
+                <textarea name="description" placeholder="Descreva o item" id="description" cols="30" rows="10"></textarea>
+                <button><i class="fa fa-plus"></i>Adicionar</button>
+            </form>
+        </div>
+
+        <div class="sidebar-container">
+            <div class="sidebar">
+                <div id="profile-photo"></div>
+                <div id="settings">
+                    <strong>Actualizar dados</strong>
+                    <form action="/updateprofile" method="POST" id="form-update-profile" enctype="multipart/form-data">
+                        <input type="text" name="store_name" placeholder="Nome da Loja" required>
+                        <input type="number" name="store_number" placeholder="Contacto" required>
+                        <input type="file" name="store_photo" required>
+                        <button>Actualizar</button>
+                    </form>
+
+                    <strong>Actualizar senha</strong>
+                    <form action="/updateprofile" method="POST" id="form-update-password">
+                        <input type="password" id="old-password" placeholder="Senha antiga" required>
+                        <input type="password" id="new-password" placeholder="Nova senha" required>
+                        <input type="password" id="confirm-new-password" placeholder="Confirmar nova senha" required>
+                        <button>Actualizar</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        
+    </main>
+
+    
+
+    <script src="js/panel.js"></script>
+</body>
+</html>

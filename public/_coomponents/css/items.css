@@ -1,0 +1,79 @@
+main {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+section {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+section #store-name {
+    font-size: 24px;
+    color: #ccc;
+    margin: 10px 0;
+    padding: 5px;
+    display: none;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    width: 700px;
+    transform: scale(1);
+}
+
+.item {
+    height: 200px;
+    box-shadow: 0 0 1px 1px #eee;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100px;
+    border-radius: 5px;
+    color: #999;
+    animation: anim 1s 1;
+}
+
+@keyframes anim {
+    0%{transform: scale(0.8); opacity: 0.2;}
+    100%{transform: scale(1); opacity: 1;}
+}
+
+.item .price {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 4px;
+    font-size: 11px;
+}
+
+.item .txt {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 5px;
+    font-size: 11px;
+}
+
+.txt a {
+    margin-right: 5px;
+    background-color: #ddd;
+    color: #fff;
+    padding: 2px;
+    margin: 2px 4px 2px 0;
+    border-radius: 2px;
+}
+
+@media screen and (max-width: 414px) {
+    main {
+        display: block;
+    }
+    .items {
+        width: 100%;
+    }
+}

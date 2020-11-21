@@ -1,0 +1,112 @@
+aside {
+    padding: 10px 40px;
+}
+
+aside .category-lock {
+    margin: 5px 5px;
+    border: 1px solid #eee;
+    border-radius: 3px;
+    padding: 5px 5px;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+
+aside .category-lock #locker {
+    margin-right: 10px;
+    font-size: 18px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    cursor: pointer; 
+}
+
+#locker:active {
+    background-color: #eee;
+}
+
+aside ul {
+    border: 1px solid #f1f1f1;
+    border-radius: 5px;
+    width: 200px;
+}
+
+aside ul li {
+    border-bottom: 1px solid #f1f1f1;
+}
+
+aside ul li a {
+    border-bottom: 1px solid #00000000;
+    padding: 2px 0;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #ccc;
+    font-weight: 100;
+}
+
+aside ul li a:hover {
+    background-color: #fcfcfc;
+    transition: .4s ease;
+}
+
+.icon {
+    display: flex;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    margin: 0 5px;
+}
+
+aside ul li i {
+    font-size: 12px;
+    color: #ddd;
+}
+
+.promotion .icon {
+    background-color: #D50000;
+    animation: anm 2s infinite;
+}
+
+.promotion i {
+     color: #fff;
+}
+
+@keyframes anm {
+    from{background-color: #eee;}
+    to{background-color: #D50000;}
+}
+
+@media screen and (max-width: 414px) {
+    aside {
+        padding: 0;
+        border: 1px solid #f1f1f1;
+    }
+
+    aside .category-lock {
+        display: flex;
+    }
+
+    aside ul {
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        border: none;
+        height: 80vh;
+        overflow-y: scroll;
+    }
+    
+    aside ul li a {
+        margin: 0;
+        padding: 5px 10px;
+        display: inline-flex;
+        width: 100%;
+        border: 1px solid #f9f9f9;
+    }
+}

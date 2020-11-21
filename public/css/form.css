@@ -1,0 +1,48 @@
+form {
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form input, button {
+    padding: 10px 12px;
+    margin: 10px;
+    width: 100%;
+    border: 1.5px solid #f1f1f1;
+    border-radius: 4px;
+}
+
+form input, textarea, select {
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 15px;
+    padding: 10px 12px 10px 33px;
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--color-1);
+}
+
+form button {
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: #ddd;
+    color: var(--color-1);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+form button:hover {
+    background-color: var(--color-1);
+    color: #fff;
+    transition: .3s ease;
+}
+
+form button i {
+    margin: auto 5px;
+}

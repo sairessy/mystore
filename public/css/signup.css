@@ -1,0 +1,105 @@
+body {
+    background-color: #fcfcfc;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+form {
+    width: 300px;
+    height: 480px;
+    padding: 10px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 0 2px 4px #f9f9f9;
+    border-radius: 5px;
+}
+
+#wrap-title {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+#title {
+    color: var(--color-1);
+}
+
+form input, button {
+    padding: 10px 12px;
+    margin: 10px;
+    width: 100%;
+    border: 1.5px solid #f1f1f1;
+    border-radius: 4px;
+}
+
+form input {
+    outline: none;
+    background-repeat: no-repeat;
+    background-position: 10px center;
+    background-size: 15px;
+    padding: 10px 12px 10px 33px;
+}
+
+input:focus {
+    border-color: var(--color-1);
+}
+
+form input[type="email"] {
+    background-image: url(../assets/img/user.svg);
+}
+
+form input[type="password"] {
+    background-image: url(../assets/img/lock-open.svg);
+}
+
+form #contact {
+    background-image: url(../assets/img/phone.svg);
+}
+
+form #store {
+    background-image: url(../assets/img/store.svg);
+}
+
+form button {
+    outline: none;
+    border: none;
+    padding: 10px;
+    background-color: #ddd;
+    color: var(--color-1);
+    cursor: pointer;
+    font-size: 14px;
+}
+
+form button:hover {
+    background-color: var(--color-1);
+    color: #fff;
+    transition: .3s ease;
+}
+
+form button i {
+    margin: auto 5px;
+}
+
+@media screen and (max-width: 414px) {
+    body {
+        background-color: #fff;
+    }
+
+    form {
+        box-shadow: none;
+        height: fit-content;
+        width: 100%;
+    }
+}
